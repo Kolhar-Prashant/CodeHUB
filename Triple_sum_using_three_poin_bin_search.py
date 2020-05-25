@@ -27,7 +27,6 @@ def check(front, next_f, rear, i):
         i = -1
         return (front, next_f, rear, i)
 
-
 if __name__ == "__main__":
     n = int(input())
     L = list(map(int, input().split()))
