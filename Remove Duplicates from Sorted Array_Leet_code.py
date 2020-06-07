@@ -1,3 +1,4 @@
+# Constraint: Don't create a new array, all replacement will be in same array.
 def check (nums):
     curr=0
     next=1
