@@ -4,7 +4,7 @@ struct node
 {
   int data;
   struct node * next;
-}*temp,*start=NULL,*t,*prev=NULL;
+}*temp,*start=NULL,*t,*prev=NULL,*end=NULL;
 
 void create_node(int d)
 {
@@ -28,13 +28,14 @@ void create_node(int d)
 void insert_in_middle(int d)
 {
   t = start;
+  temp = malloc(sizeof(struct node));
+  temp -> data = d;
   while (t->data < d)
   {
     prev = t;
     t = t->next;
   }
-  temp = malloc(sizeof(struct node));
-  temp -> data = d;
+  
   t = prev;
   if (t->next != NULL)
   {
@@ -42,6 +43,20 @@ void insert_in_middle(int d)
     t->next = temp;
   }
 }
+void insert_at_end(int d)
+{
+  temp = malloc(sizeof(struct node));
+  temp -> data = d;
+  end = start;
+  while (end->next != NULL)
+  {
+    end = end->next;
+  }
+  end -> next = temp;
+  temp -> next = NULL;
+  end = temp;
+}
+  
 void traverse()
 {
   t = start;
@@ -57,6 +72,8 @@ int main() {
   create_node(10);
   create_node(12);
   insert_in_middle(11);
+  insert_at_end(19);
+  insert_in_middle(15);
   traverse();
   return 0;
 }
