@@ -13,7 +13,7 @@ def calc (num,indx):
 
 prime_fact = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
 factor = []
-no = 48
+no = int(input("Enter no to find it's prime factors: "))
 base_no = no
 indx = 0
 
