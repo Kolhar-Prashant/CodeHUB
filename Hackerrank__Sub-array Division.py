@@ -12,7 +12,6 @@ def birthday(s, d, m):
         sum = 0
         try:
             for _ in range(m):
-                print(L[min_indx])
                 sum += L[min_indx]
                 min_indx += 1
         except:
