@@ -15,7 +15,6 @@ def build_teens(num,indx,temp,place_val=''):
 def build_sentence(s):
     teens = ['one', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety',
             'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
-    word = ''
     list = s.split(' ')
     if len(list) > 2:
         if list[-2] in teens:
